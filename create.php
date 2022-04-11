@@ -1,6 +1,5 @@
 <?php
-
- include './db.php';
+include './db.php';
 
  if (isset($_POST['submit'])){
      $task = $_POST['task'];
