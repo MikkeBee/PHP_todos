@@ -1,19 +1,18 @@
 <?php
 
-include './db.php';
-$result = mysqli_query($connection, $query);
+ include './db.php';
 
-if (isset($_POST['submit'])){
-    $task = $_POST['task'];
-    $date = date("Y-m-d H:i:s");
+ if (isset($_POST['submit'])){
+     $task = $_POST['task'];
+     $date = date("Y-m-d H:i:s");
 
-    $query = "INSERT INTO todos(task,date) VALUES('$task','$date')"; 
-    $result = mysqli_query($connection, $query);
+     $query = "INSERT INTO todos(task,date) VALUES('$task','$date')"; 
+     $result = mysqli_query($connection, $query);
 
-    if(!$result){
-        die("Could not post. Sorry.");
-     }
-}
+     if(!$result){
+         die("Could not post. Sorry.");
+      }
+ }
 
 ?>
 
