@@ -1,7 +1,6 @@
 <?php
 
 include './db.php';
-$result = mysqli_query($connection, $query);
 
 if (isset($_POST['submit'])){
     $task = $_POST['task'];
