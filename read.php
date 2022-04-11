@@ -16,6 +16,6 @@ if(!$result){
     $id = $row['id'];
     $task = $row['task'];
     $date = $row['date'];
-    echo "Entry number: $id, Task: $task, Date added: $date <br>";
+    echo "<div>Entry number: $id, Task: $task, Date added: $date </div>";
 }
  ?></div>
