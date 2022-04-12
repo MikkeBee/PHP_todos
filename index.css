@@ -4,34 +4,32 @@
   box-sizing: border-box;
 }
 
-.listContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  background-color: aquamarine;
-  width: 80vw;
-  margin: 2rem;
+button {
+  height: 2rem;
+  width: 5rem;
+}
+.textfield {
+  height: 2rem;
+  padding-left: 0.4rem;
+  width: 60%;
+  font-size: 1rem;
+  border-radius: 3px;
+  border-style: none;
+  background-color: rgb(230, 230, 230);
 }
 
-.list {
-  border-bottom: 2px dotted black;
-  list-style: none;
-  background-color: rgb(230, 230, 230);
-  width: inherit;
+.textfield:nth-child(2n) {
+  background-color: rgb(211, 208, 208);
 }
+
 .listItem {
   display: flex;
   justify-content: space-between;
+  flex-flow: row wrap;
   padding: 1rem;
+  background-color: rgb(230, 230, 230);
+  border: solid 1px black;
 }
-
-.listItem:nth-last-child(2n) {
+.listItem:nth-child(2n) {
   background-color: rgb(211, 208, 208);
-}
-.listItem:last-child {
-  border-bottom: none;
-}
-
-.listId {
 }
