@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,19 +12,17 @@
 </head>
 <body>
     <div class="addEntry">
-        <?php include './create.php' ?>
+        <?php   include './create.php' ?>
     </div>
-    <div class="updateEntry">
-        <?php include './update.php' ?>
-    </div>
-    <div class="deleteEntry"> <?php include "./delete.php" ?>
+    <!-- <div class="updateEntry">
+        <?php  // include './update.php' ?>
+    </div>  -->
+    <!-- <div class="deleteEntry"> <?php // include "./delete.php" ?> -->
     </div>
     <div class="listContainer">
         <h2> TODO </h2>
-         <ul class="list">
               <?php include "./read.php" ?> 
-            </ul>
-        </div>
+    </div>
     
 </body>
 </html>
