@@ -1,7 +1,7 @@
 <?php 
 include './db.php';
 
-$query = "SELECT * FROM todos";
+$query = "SELECT * FROM todos ORDER BY 'date' desc";
 $result = mysqli_query($connection, $query);
 // $row = mysqli_fetch_array($result);
 if(!$result){
@@ -16,6 +16,6 @@ if(!$result){
     $id = $row['id'];
     $task = $row['task'];
     $date = $row['date'];
-    echo "<li class='listEntry'>Entry number: $id, Task: $task, Date added: $date </li>";
+    echo "<li class='listItem'> <p>ID: $id </p> <p> $task</p> <p> $date</p> </li>";
 }
  ?></div>
