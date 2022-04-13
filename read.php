@@ -47,11 +47,11 @@ if (isset($_POST['delete'])) {
      <input type="submit" name="submit" value="DELETE">
  </form>
 
-    <form class="listItem" action="update.php" method="post">
+    <form class="listItem" action="read.php" method="post">
          <select name="id" id="">
           <?= "<option value='$id'>$id</option>"?>     
         </select> 
-         <input class="textfield" type="text"  value="<?= $task ?>" name="task" /> 
+         <input class="textfield" type="text"  value="<?= $task ?>"  name="task" /> 
           <p> <?=$date?> </p> 
          <input type="submit" name="update" value="Update">
     </form>

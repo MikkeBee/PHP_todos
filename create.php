@@ -1,6 +1,12 @@
 <?php
 include './db.php';
 
+$query = "SELECT * FROM todos ORDER BY 'date' desc";
+$result = mysqli_query($connection, $query);
+if(!$result){
+  die('Nothing to get');
+};
+
  if (isset($_POST['submit'])){
      $task = $_POST['task'];
      $date = date("Y-m-d H:i:s");
