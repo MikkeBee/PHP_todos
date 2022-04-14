@@ -16,7 +16,8 @@ if (isset($_POST['submit'])){
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $task = $_POST['task'];
-    $query = "UPDATE todos SET task='$task' WHERE id = $id";
+
+    $query = "UPDATE todos SET task='$task'  WHERE id = $id";
   
     $result = mysqli_query($connection, $query);
     if (!$result) {
@@ -82,14 +83,9 @@ while($row = mysqli_fetch_array($result)){
         <input class="textfield" type="text"  value="<?= $task ?>"  name="task" /> 
           <p> <?=$date?> </p> 
          <input class="inputButton" type="submit" name="update" value="Update">
+         <input class="inputButton" type="submit" name="delete" value="DELETE">
     </form>
 
-    <form class="delete" action="index.php" method="post" >
-        <select name="id" id="">
-            <?= "<option value='$id'>$id</option>" ?>    
-        </select>
-        <input class="inputButton" type="submit" name="delete" value="DELETE">
-    </form>
 </div>
  <?php } ?> 
  </div>
