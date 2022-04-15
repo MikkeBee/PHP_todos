@@ -75,16 +75,11 @@ textarea {
   background-color: darkslategray;
 }
 
-.tasks p {
-  font-size: 1.1rem;
-  margin: 0 2rem 0 0;
-}
-
-/* select {
+select {
   border-radius: 3px;
   height: 2rem;
   width: 3rem;
-} */
+}
 
 .inputButton {
   width: 7rem;

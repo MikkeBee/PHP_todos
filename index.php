@@ -83,10 +83,9 @@ while($row = mysqli_fetch_array($result)){
 
 <div class="tasks">
     <form class="update" action="index.php" method="post">
-        <!-- <select name="id" id="">
-            <?= "<option value='$id'>$id</option>"?>     
-        </select>  -->
-        <p>Task ID: <?=$id?></p>
+       <select name="id" id="">
+            <?= "<option value='$id'>$id</option>"?>
+        </select>
         <input class="textfield" type="text"  value="<?= $task ?>"  name="task" /> 
           <p> <?=$date?> </p> 
          <input class="inputButton" type="submit" name="update" value="Update">
