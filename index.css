@@ -75,11 +75,16 @@ textarea {
   background-color: darkslategray;
 }
 
-select {
+.tasks p {
+  font-size: 1.1rem;
+  margin: 0 2rem 0 0;
+}
+
+/* select {
   border-radius: 3px;
   height: 2rem;
   width: 3rem;
-}
+} */
 
 .inputButton {
   width: 7rem;
@@ -122,13 +127,14 @@ select {
   border-style: none;
   background-color: darkslategray;
   color: white;
+  transition: 0.3s;
 }
 
 .textfield:hover {
   border-style: none;
   box-shadow: 0 0 3px black;
   transform: scale(103%);
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 /*
