@@ -1,5 +1,6 @@
 <?php
 include './db.php';
+date_default_timezone_set('Europe/Helsinki');
 
 if (isset($_POST['submit'])){
     $task = test_inputs($_POST['task']);
