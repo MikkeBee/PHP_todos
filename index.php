@@ -2,7 +2,7 @@
 include './db.php';
 
 if (isset($_POST['submit'])){
-    $task = $_POST['task'];
+    $task = test_inputs($_POST['task']);
     $date = date("Y-m-d H:i:s");
 
     $query = "INSERT INTO todos(task,date) VALUES('$task','$date')"; 
@@ -15,9 +15,10 @@ if (isset($_POST['submit'])){
 
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
-    $task = $_POST['task'];
+    $task = test_inputs($_POST['task']);
+    $date = date("Y-m-d H:i:s");
 
-    $query = "UPDATE todos SET task='$task'  WHERE id = $id";
+    $query = "UPDATE todos SET task='$task', date='$date'  WHERE id = $id";
   
     $result = mysqli_query($connection, $query);
     if (!$result) {
@@ -33,6 +34,13 @@ if (isset($_POST['delete'])) {
       die("Delete query failed" . mysqli_error($connection));
     }
   };
+
+  function test_inputs($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
 ?>
 
@@ -54,19 +62,14 @@ if (isset($_POST['delete'])) {
 <h1> TO DO </h1>
 <h3>An app by Jenna, Mikke & Oscar</h3>
 </header>
-    <div class="container">
-        
+    <div class="container">     
           <form action="index.php" method="POST" class="form">
             <textarea
                 id="task"
                 name="task"></textarea>
-            
               <button type="submit" name="submit" class="btn">Add item to the list</button>
-            
           </form>
     </div>
-
-
     <div class="container">
 <?php
 $query = "SELECT * FROM todos ORDER BY 'date' desc";
